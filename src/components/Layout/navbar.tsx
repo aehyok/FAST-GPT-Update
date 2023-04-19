@@ -1,8 +1,8 @@
 /*
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-19 17:38:33
- * @LastEditors: 刘启明 455043818@qq.com
- * @LastEditTime: 2023-04-19 18:37:31
+ * @LastEditors: aehyok 455043818@qq.com
+ * @LastEditTime: 2023-04-20 00:28:01
  * @FilePath: \AK47-GPT\src\components\Layout\navbar.tsx
  * @Description: 
  * 
@@ -39,11 +39,10 @@ const Navbar = ({
       h={'100%'}
       w={'100%'}
       boxShadow={'4px 0px 4px 0px rgba(43, 45, 55, 0.01)'}
-      userSelect={'none'}
     >
       {/* logo */}
       <Box pb={4}>
-        <Image src={'/icon/logo.png'} width={'35'} height={'35'} alt=""></Image>
+        <Image src={'/images/logo.png'} width={'35'} height={'35'} alt=""></Image>
       </Box>
       {/* 导航列表 */}
       <Box flex={1}>
