@@ -1,3 +1,13 @@
+/*
+ * @Author: 刘启明 455043818@qq.com
+ * @Date: 2023-04-19 17:38:33
+ * @LastEditors: 刘启明 455043818@qq.com
+ * @LastEditTime: 2023-04-19 18:37:31
+ * @FilePath: \AK47-GPT\src\components\Layout\navbar.tsx
+ * @Description: 
+ * 
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
+ */
 import React from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 import Image from 'next/image';
