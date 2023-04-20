@@ -1,8 +1,8 @@
 /*
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-19 17:38:33
- * @LastEditors: 刘启明 455043818@qq.com
- * @LastEditTime: 2023-04-20 10:07:21
+ * @LastEditors: aehyok 455043818@qq.com
+ * @LastEditTime: 2023-04-21 01:07:20
  * @FilePath: \AK47-GPT\src\components\Layout\navbar.tsx
  * @Description: 
  * 
@@ -60,13 +60,13 @@ const Navbar = ({
             }}
             cursor={'pointer'}
             fontSize={'sm'}
-            w={'60px'}
+            w={'65px'}
             h={'70px'}
-            borderRadius={'sm'}
+            borderRadius={'md'}
             {...(item.activeLink.includes(router.pathname)
               ? {
                   color: '#2B6CB0',
-                  backgroundColor: '#BEE3F8'
+                  backgroundColor: '#222e46'
                 }
               : {
                   color: '#4A5568',
@@ -77,9 +77,9 @@ const Navbar = ({
               name={item.icon as any}
               width={'24px'}
               height={'24px'}
-              fill={item.activeLink.includes(router.pathname) ? '#2B6CB0' : '#4A5568'}
+              fill={item.activeLink.includes(router.pathname) ? 'white' : '#41787a'}
             />
-            <Box mt={1} color={item.activeLink.includes(router.pathname) ? '#2B6CB0' : 'white'}>{item.label}</Box>
+            <Box mt={1} color={item.activeLink.includes(router.pathname) ? 'white' : '#41787a' }>{item.label}</Box>
           </Flex>
         ))}
       </Box>
