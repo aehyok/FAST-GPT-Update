@@ -1,8 +1,8 @@
 /*
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-19 17:38:33
- * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-04-20 00:28:01
+ * @LastEditors: 刘启明 455043818@qq.com
+ * @LastEditTime: 2023-04-20 10:07:21
  * @FilePath: \AK47-GPT\src\components\Layout\navbar.tsx
  * @Description: 
  * 
@@ -35,7 +35,6 @@ const Navbar = ({
       flexDirection={'column'}
       alignItems={'center'}
       py={3}
-      backgroundColor={'white'}
       h={'100%'}
       w={'100%'}
       boxShadow={'4px 0px 4px 0px rgba(43, 45, 55, 0.01)'}
@@ -80,7 +79,7 @@ const Navbar = ({
               height={'24px'}
               fill={item.activeLink.includes(router.pathname) ? '#2B6CB0' : '#4A5568'}
             />
-            <Box mt={1}>{item.label}</Box>
+            <Box mt={1} color={item.activeLink.includes(router.pathname) ? '#2B6CB0' : 'white'}>{item.label}</Box>
           </Flex>
         ))}
       </Box>
