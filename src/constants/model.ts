@@ -9,6 +9,7 @@ export enum ChatModelNameEnum {
 
 export const ChatModelNameMap = {
   [ChatModelNameEnum.GPT35]: 'gpt-3.5-turbo',
+  [ChatModelNameEnum.GPT40]: 'gpt-4',
   [ChatModelNameEnum.VECTOR_GPT]: 'gpt-3.5-turbo',
   [ChatModelNameEnum.VECTOR]: 'text-embedding-ada-002'
 };
@@ -28,7 +29,17 @@ export const ChatModelNameMap = {
 export const modelList = [
   {
     serviceCompany: 'openai',
-    name: 'chatGPT',
+    name: 'GPT-3.5',
+    model: ChatModelNameEnum.GPT35,
+    trainName: '',
+    maxToken: 4000,
+    contextMaxToken: 7500,
+    maxTemperature: 1.5,
+    price: 3
+  },
+  {
+    serviceCompany: 'openai',
+    name: 'GPT-4',
     model: ChatModelNameEnum.GPT35,
     trainName: '',
     maxToken: 4000,

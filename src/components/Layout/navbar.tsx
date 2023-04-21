@@ -1,22 +1,24 @@
 /*
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-19 17:38:33
- * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-04-21 01:07:20
- * @FilePath: \AK47-GPT\src\components\Layout\navbar.tsx
+ * @LastEditors: 刘启明 455043818@qq.com
+ * @LastEditTime: 2023-04-21 19:51:33
+ * @FilePath: \github\AK47-GPT\src\components\Layout\navbar.tsx
  * @Description: 
  * 
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
  */
 import React from 'react';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex,   useColorMode } from '@chakra-ui/react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import MyIcon from '../Icon';
+import { SunIcon, MoonIcon } from '@chakra-ui/icons'
 export enum NavbarTypeEnum {
   normal = 'normal',
   small = 'small'
 }
+
 
 const Navbar = ({
   navbarList
@@ -30,6 +32,8 @@ const Navbar = ({
 }) => {
   const router = useRouter();
 
+  const { colorMode, toggleColorMode } = useColorMode()
+  
   return (
     <Flex
       flexDirection={'column'}
@@ -82,6 +86,11 @@ const Navbar = ({
             <Box mt={1} color={item.activeLink.includes(router.pathname) ? 'white' : '#41787a' }>{item.label}</Box>
           </Flex>
         ))}
+      </Box>
+      <Box display={"flex"} alignItems={"center"} justifyContent={"center"} onClick={toggleColorMode}>
+        {
+          colorMode === "light"?  <SunIcon  w={8} h={8} color="white"/> : <MoonIcon  w={8} h={8} color="white"/>
+        }
       </Box>
     </Flex>
   );

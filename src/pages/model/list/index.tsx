@@ -2,7 +2,7 @@
  * @Author: aehyok 455043818@qq.com
  * @Date: 2023-04-19 22:38:10
  * @LastEditors: 刘启明 455043818@qq.com
- * @LastEditTime: 2023-04-21 16:33:00
+ * @LastEditTime: 2023-04-21 20:07:11
  * @FilePath: \github\AK47-GPT\src\pages\model\list\index.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -23,10 +23,7 @@ import {
   Input,
   Card,
   Flex,
-  useColorMode,
   Select,
-} from "@chakra-ui/react";
-import {
   Modal,
   Tag,
   ModalOverlay,
@@ -35,19 +32,21 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
+  Box
 } from "@chakra-ui/react";
+
 import React, { useState } from "react";
-import { Box } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { modelList } from '@/constants/model';
+import { useRouter } from "next/router";
 
 export default function list() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const initialRef = React.useRef(null);
   const finalRef = React.useRef(null);
-
-  const { colorMode, toggleColorMode } = useColorMode();
+  const router = useRouter();
+  // const { colorMode, toggleColorMode } = useColorMode();
 
   const [refresh, setRefresh] = useState(false);
 
@@ -62,10 +61,17 @@ export default function list() {
     formState: { errors },
   } = useForm<ModelFormType>();
   
+
+  const onChatPlay = () => {
+    console.log('onChatPlay');
+    const chatId = 1000
+    router.push(`/chat?chatId=${chatId}`, undefined, {
+      shallow: true
+    });
+  }
   const openClick = () => {
     // onOpen(true);
     //  = useColorMode()
-    toggleColorMode;
   };
   return (
     <>
@@ -138,7 +144,7 @@ export default function list() {
                 </Td>
                 <Td>
                   {" "}
-                  <Button size='sm' mr={2} variant='solid' colorScheme="teal">对话</Button>
+                  <Button size='sm' mr={2} variant='solid' colorScheme="teal" onClick={onChatPlay}>对话</Button>
                   <Button size='sm' variant={"outline"} colorScheme="teal">
                     编辑
                   </Button>
@@ -184,9 +190,9 @@ export default function list() {
 
               <ModalFooter>
                 <Button colorScheme="blue" mr={3}>
-                  Save
+                  保存
                 </Button>
-                <Button onClick={onClose}>Cancel</Button>
+                <Button onClick={onClose}>取消</Button>
               </ModalFooter>
             </ModalContent>
           </Modal>
