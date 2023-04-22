@@ -2,7 +2,7 @@
  * @Author: aehyok 455043818@qq.com
  * @Date: 2023-04-22 08:20:43
  * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-04-23 06:14:29
+ * @LastEditTime: 2023-04-23 07:26:51
  * @FilePath: /ak47-gpt/src/pages/model/edit/index.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -23,13 +23,19 @@ import {
   SliderTrack,
   SliderFilledTrack,
   SliderThumb,
-  Textarea
+  Textarea,
+  TableContainer,
+  Table,
+  Thead,
+  Th,
+  Td,
+  Tr,
+  Tbody
 } from "@chakra-ui/react";
-import { QuestionOutlineIcon } from '@chakra-ui/icons';
-
+import { QuestionOutlineIcon } from "@chakra-ui/icons";
 
 export default function ModelEdit() {
-const canTrain = true;
+  const canTrain = true;
   return (
     <>
       <Box margin={"25px"}>
@@ -112,64 +118,111 @@ const canTrain = true;
               </Card>
             </GridItem>
             <Card p={4}>
-        <Box fontWeight={'bold'}>模型效果</Box>
-        <FormControl mt={4}>
-          <Flex alignItems={'center'}>
-            <Box flex={'0 0 80px'} w={0}>
-              <Box as={'span'} mr={2}>
-                温度
-              </Box>
-              <Tooltip label={'温度越高，模型的发散能力越强；温度越低，内容越严谨。'}>
-                <QuestionOutlineIcon />
-              </Tooltip>
-            </Box>
+              <Box fontWeight={"bold"}>模型效果</Box>
+              <FormControl mt={4}>
+                <Flex alignItems={"center"}>
+                  <Box flex={"0 0 80px"} w={0}>
+                    <Box as={"span"} mr={2}>
+                      温度
+                    </Box>
+                    <Tooltip
+                      label={
+                        "温度越高，模型的发散能力越强；温度越低，内容越严谨。"
+                      }
+                    >
+                      <QuestionOutlineIcon />
+                    </Tooltip>
+                  </Box>
 
-            <Slider
-              aria-label="slider-ex-1"
-              min={0}
-              max={10}
-              step={1}
-              value={4}
-              onChange={(e) => {
-                // setValue('temperature', e);
-                // setRefresh(!refresh);
-              }}
-            >
-              <SliderMark
-                value={4}
-                textAlign="center"
-                bg="blue.500"
-                color="white"
-                w={'18px'}
-                h={'18px'}
-                borderRadius={'100px'}
-                fontSize={'xs'}
-                transform={'translate(-50%, -200%)'}
-              >
-                4
-              </SliderMark>
-              <SliderTrack>
-                <SliderFilledTrack />
-              </SliderTrack>
-              <SliderThumb />
-            </Slider>
-          </Flex>
-        </FormControl>
-        <Box mt={4}>
-          <Box mb={1}>系统提示词</Box>
-          <Textarea
-            rows={6}
-            maxLength={-1}
-            placeholder={
-              canTrain
-                ? '训练的模型会根据知识库内容，生成一部分系统提示词，因此在对话时需要消耗更多的 tokens。你仍可以增加一些提示词，让其效果更精确。'
-                : '模型默认的 prompt 词，通过调整该内容，可以生成一个限定范围的模型。\n\n注意，改功能会影响对话的整体朝向！'
-            }
-          />
-        </Box>
-      </Card>
-            <GridItem w="100%"></GridItem>
+                  <Slider
+                    aria-label="slider-ex-1"
+                    min={0}
+                    max={10}
+                    step={1}
+                    value={4}
+                    onChange={(e) => {
+                      // setValue('temperature', e);
+                      // setRefresh(!refresh);
+                    }}
+                  >
+                    <SliderMark
+                      value={4}
+                      textAlign="center"
+                      bg="blue.500"
+                      color="white"
+                      w={"18px"}
+                      h={"18px"}
+                      borderRadius={"100px"}
+                      fontSize={"xs"}
+                      transform={"translate(-50%, -200%)"}
+                    >
+                      4
+                    </SliderMark>
+                    <SliderTrack>
+                      <SliderFilledTrack />
+                    </SliderTrack>
+                    <SliderThumb />
+                  </Slider>
+                </Flex>
+              </FormControl>
+              <Box mt={4}>
+                <Box mb={1}>系统提示词</Box>
+                <Textarea
+                  rows={6}
+                  maxLength={-1}
+                  placeholder={
+                    canTrain
+                      ? "训练的模型会根据知识库内容，生成一部分系统提示词，因此在对话时需要消耗更多的 tokens。你仍可以增加一些提示词，让其效果更精确。"
+                      : "模型默认的 prompt 词，通过调整该内容，可以生成一个限定范围的模型。\n\n注意，改功能会影响对话的整体朝向！"
+                  }
+                />
+              </Box>
+            </Card>
           </Grid>
+          <Card p={4} marginTop = {"20px"}>
+              <TableContainer minH={"500px"} w="100%">
+                <Table variant={"simple"}>
+                  <Thead>
+                    <Tr>
+                      <Th>Question</Th>
+                      <Th>Text</Th>
+                      <Th>Status</Th>
+                      <Th>操作</Th>
+                    </Tr>
+                  </Thead>
+                  <Tbody>
+                    <Tr>
+                      <Td>你好</Td>
+                      <Td>你好</Td>
+                      <Td>已上线</Td>
+                      <Td>
+                        <Button
+                          size={"sm"}
+                          colorScheme={"teal"}
+                          variant={"outline"}
+                        >
+                          编辑
+                        </Button>
+                      </Td>
+                    </Tr>
+                    <Tr>
+                      <Td>你好</Td>
+                      <Td>你好</Td>
+                      <Td>已上线</Td>
+                      <Td>
+                        <Button
+                          size={"sm"}
+                          colorScheme={"teal"}
+                          variant={"outline"}
+                        >
+                          编辑
+                        </Button>
+                      </Td>
+                    </Tr>
+                  </Tbody>
+                </Table>
+              </TableContainer>
+            </Card>
         </Card>
       </Box>
     </>
