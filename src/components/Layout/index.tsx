@@ -1,8 +1,8 @@
 /*
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-19 17:14:17
- * @LastEditors: 刘启明 455043818@qq.com
- * @LastEditTime: 2023-04-20 09:52:29
+ * @LastEditors: aehyok 455043818@qq.com
+ * @LastEditTime: 2023-04-22 08:22:44
  * @FilePath: \AK47-GPT\src\components\Layout\index.tsx
  * @Description:
  *
@@ -30,7 +30,7 @@ const Layout = ({ children }: { children: JSX.Element }) => {
       label: '模型',
       icon: 'model',
       link: '/model/list',
-      activeLink: ['/model/list', '/model/detail']
+      activeLink: ['/model/list', '/model/edit']
     },
     {
       label: '账号',

@@ -1,8 +1,8 @@
 /*
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-19 17:38:33
- * @LastEditors: 刘启明 455043818@qq.com
- * @LastEditTime: 2023-04-21 19:51:33
+ * @LastEditors: aehyok 455043818@qq.com
+ * @LastEditTime: 2023-04-22 08:17:29
  * @FilePath: \github\AK47-GPT\src\components\Layout\navbar.tsx
  * @Description: 
  * 
@@ -45,7 +45,7 @@ const Navbar = ({
     >
       {/* logo */}
       <Box pb={4}>
-        <Image src={'/images/logo.png'} width={'35'} height={'35'} alt=""></Image>
+        <Image src={'/images/icon_logo.png'} width={'70'} height={'45'} alt=""></Image>
       </Box>
       {/* 导航列表 */}
       <Box flex={1}>
