@@ -2,7 +2,7 @@
  * @Author: aehyok 455043818@qq.com
  * @Date: 2023-04-19 22:38:10
  * @LastEditors: 刘启明 455043818@qq.com
- * @LastEditTime: 2023-04-21 20:07:11
+ * @LastEditTime: 2023-04-21 20:59:08
  * @FilePath: \github\AK47-GPT\src\pages\model\list\index.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -82,7 +82,7 @@ export default function list() {
               模型列表
             </Box>
 
-            <Button variant={"outline"} colorScheme="teal" onClick={onOpen}>
+            <Button variant={"outline"} colorScheme="teal" onClick={onOpen} size='sm' >
               新建模型
             </Button>
           </Flex>
