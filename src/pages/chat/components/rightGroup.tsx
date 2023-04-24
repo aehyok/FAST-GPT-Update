@@ -1,12 +1,13 @@
 /*
  * @Author: aehyok 455043818@qq.com
  * @Date: 2023-04-24 06:18:11
- * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-04-24 07:15:14
- * @FilePath: /ak47-gpt/src/pages/chat/components/rightGroup.tsx
+ * @LastEditors: 刘启明 455043818@qq.com
+ * @LastEditTime: 2023-04-24 20:12:45
+ * @FilePath: \AK47-GPT\src\pages\chat\components\rightGroup.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Button, Textarea } from "@chakra-ui/react";
+import { useState } from "react";
 import styles from "./rightGroup.module.scss";
 export default function leftGroup() {
   const questionAndAnswerData = [
@@ -15,8 +16,20 @@ export default function leftGroup() {
     { question: "你今年多大了", answer: "我今年10岁了" },
     { question: "你是男孩还是女孩", answer: "我是男孩" },
     { question: "你喜欢什么运动", answer: "我喜欢足球" },
+    { question: "你今年多大了", answer: "我今年10岁了" },
+    { question: "你是男孩还是女孩", answer: "我是男孩" },
+    { question: "你喜欢什么运动", answer: "我喜欢足球" },
+    { question: "你今年多大了", answer: "我今年10岁了" },
+    { question: "你是男孩还是女孩", answer: "我是男孩" },
+    { question: "你喜欢什么运动", answer: "我喜欢足球" },
   ];
 
+
+  const [loadingState, setLoadingState] = useState(false)
+
+  const submitClick = () => {
+    setLoadingState(true);
+  }
   return (
     <>
       <Box width={"100%"} bg={"black"} height="100vh">
@@ -69,6 +82,24 @@ export default function leftGroup() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {
+            loadingState?           
+            <Box textAlign={"center"} margin={"20px 0"} >
+              <Button size='sm' mr={2} variant='solid' colorScheme="teal" isLoading={loadingState}
+                loadingText='正在请求数据，请稍后......'
+                ></Button>
+            </Box>
+          : ""
+          }
+
+          <div className={styles.footContent}>
+            <Button size='sm' mr={2} variant='solid' colorScheme="teal">生成会话截图</Button>
+            <Textarea placeholder='Send a message......' height={"35px"} margin={"10px"} />
+            <Button size='sm' mr={2} variant='solid' colorScheme="teal" onClick={submitClick}>
+              发送
+            </Button>
           </div>
         </div>
       </Box>
