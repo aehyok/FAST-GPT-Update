@@ -1,8 +1,8 @@
 /*
  * @Author: aehyok 455043818@qq.com
  * @Date: 2023-04-24 06:18:11
- * @LastEditors: 刘启明 455043818@qq.com
- * @LastEditTime: 2023-04-24 20:12:45
+ * @LastEditors: aehyok 455043818@qq.com
+ * @LastEditTime: 2023-04-25 05:32:17
  * @FilePath: \AK47-GPT\src\pages\chat\components\rightGroup.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -59,7 +59,7 @@ export default function leftGroup() {
                   <div className={styles.answerLeft}>
                     <Box width="40px">
                       <Image
-                          src={"/images/icon_avator.png"}
+                          src={"/images/openai.svg"}
                           width={"30px"}
                           height={"30px"}
                           marginLeft={"10px"}
@@ -96,7 +96,7 @@ export default function leftGroup() {
 
           <div className={styles.footContent}>
             <Button size='sm' mr={2} variant='solid' colorScheme="teal">生成会话截图</Button>
-            <Textarea placeholder='Send a message......' height={"35px"} margin={"10px"} />
+            <Textarea color={"white"} size="xs" placeholder='Send a message......' paddingTop={"10px"} margin={"8px"} />
             <Button size='sm' mr={2} variant='solid' colorScheme="teal" onClick={submitClick}>
               发送
             </Button>

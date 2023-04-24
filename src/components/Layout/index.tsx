@@ -2,7 +2,7 @@
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-19 17:14:17
  * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-04-22 08:22:44
+ * @LastEditTime: 2023-04-25 05:04:59
  * @FilePath: \AK47-GPT\src\components\Layout\index.tsx
  * @Description:
  *
@@ -21,10 +21,10 @@ const Layout = ({ children }: { children: JSX.Element }) => {
 
   const navbarList = [
     {
-      label: '介绍',
+      label: '聊天',
       icon: 'board',
-      link: '/home',
-      activeLink: ['/home']
+      link: '/chat',
+      activeLink: ['/chat']
     },
     {
       label: '模型',
