@@ -2,7 +2,7 @@
  * @Author: aehyok 455043818@qq.com
  * @Date: 2023-04-19 20:30:30
  * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-04-19 22:35:27
+ * @LastEditTime: 2023-04-29 20:09:22
  * @FilePath: /ak47-gpt/src/components/Icon/index.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -11,6 +11,11 @@ import type { IconProps } from '@chakra-ui/react';
 import { Icon } from '@chakra-ui/react';
 
 const map = {
+  audio: require('./icons/audio.svg').default,
+  video: require('./icons/video.svg').default,
+  image: require('./icons/image.svg').default,
+  chat: require('./icons/chat.svg').default,
+  account: require('./icons/account.svg').default,
   model: require('./icons/model.svg').default,
   share: require('./icons/share.svg').default,
   home: require('./icons/home.svg').default,

@@ -2,7 +2,7 @@
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-19 17:38:33
  * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-04-22 08:17:29
+ * @LastEditTime: 2023-04-29 16:33:49
  * @FilePath: \github\AK47-GPT\src\components\Layout\navbar.tsx
  * @Description: 
  * 
@@ -34,6 +34,16 @@ const Navbar = ({
 
   const { colorMode, toggleColorMode } = useColorMode()
   
+  const leftBottomlist = [
+    {
+      label: '账号',
+      icon: 'account',
+      link: '/account',
+      activeLink: ['/account']
+    }
+  ]
+
+  const item = leftBottomlist[0]
   return (
     <Flex
       flexDirection={'column'}
@@ -87,10 +97,26 @@ const Navbar = ({
           </Flex>
         ))}
       </Box>
-      <Box display={"flex"} alignItems={"center"} justifyContent={"center"} onClick={toggleColorMode}>
-        {
-          colorMode === "light"?  <SunIcon  w={8} h={8} color="white"/> : <MoonIcon  w={8} h={8} color="white"/>
-        }
+      <Box display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"} 
+        onClick={() => {
+          if (item.link === router.pathname) return;
+          router.push(item.link, undefined, {
+            shallow: true
+          });
+        }}
+      >
+        
+        {/* {
+           colorMode === "light"?  <SunIcon  w={8} h={8} color="white"/> : <MoonIcon  w={8} h={8} color="white"/>
+        } */}
+        <MyIcon
+          name={item.icon as any}
+          width={'24px'}
+          height={'24px'}
+          fill={item.activeLink.includes(router.pathname) ? 'white' : '#41787a'}
+        />
+        <Box mt={1} color={item.activeLink.includes(router.pathname) ? 'white' : '#41787a' }>{item.label}</Box>
+        
       </Box>
     </Flex>
   );

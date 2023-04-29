@@ -1,8 +1,8 @@
 /*
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-21 20:35:58
- * @LastEditors: 刘启明 455043818@qq.com
- * @LastEditTime: 2023-04-23 11:50:54
+ * @LastEditors: aehyok 455043818@qq.com
+ * @LastEditTime: 2023-04-29 20:06:56
  * @FilePath: \AK47-GPT\src\pages\chat\components\leftGroup.tsx
  * @Description: 
  * 
@@ -23,19 +23,19 @@ export default function leftGroup () {
       title: "chkra-ui使用"
     },
     {
-      id: 1,
+      id: 3,
       title: "Next.js部署"
     }, 
     {
-      id: 2,
+      id: 4,
       title: "chkra-ui使用"
     },
     {
-      id: 1,
+      id: 5,
       title: "Next.js部署"
     }, 
     {
-      id: 2,
+      id: 6,
       title: "chkra-ui使用"
     }
   ]

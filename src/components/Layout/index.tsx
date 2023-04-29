@@ -2,7 +2,7 @@
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-19 17:14:17
  * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-04-25 05:04:59
+ * @LastEditTime: 2023-04-29 17:01:08
  * @FilePath: \AK47-GPT\src\components\Layout\index.tsx
  * @Description:
  *
@@ -22,7 +22,7 @@ const Layout = ({ children }: { children: JSX.Element }) => {
   const navbarList = [
     {
       label: '聊天',
-      icon: 'board',
+      icon: 'chat',
       link: '/chat',
       activeLink: ['/chat']
     },
@@ -33,10 +33,22 @@ const Layout = ({ children }: { children: JSX.Element }) => {
       activeLink: ['/model/list', '/model/edit']
     },
     {
-      label: '账号',
-      icon: 'user',
-      link: '/account',
-      activeLink: ['/account']
+      label: '图片',
+      icon: 'image',
+      link: '/image',
+      activeLink: ['/image']
+    },
+    {
+      label: '音频',
+      icon: 'audio',
+      link: '/audio',
+      activeLink: ['/audio']
+    },
+    {
+      label: '视频',
+      icon: 'video',
+      link: '/video',
+      activeLink: ['/video']
     },
     {
       label: '开发',
