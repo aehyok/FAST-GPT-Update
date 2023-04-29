@@ -1,8 +1,8 @@
 /*
  * @Author: aehyok 455043818@qq.com
  * @Date: 2023-04-18 22:12:49
- * @LastEditors: 刘启明 455043818@qq.com
- * @LastEditTime: 2023-04-19 13:51:22
+ * @LastEditors: aehyok 455043818@qq.com
+ * @LastEditTime: 2023-04-28 22:25:58
  * @FilePath: \AK47-GPT\src\pages\login\index.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -76,6 +76,7 @@ export default function Login() {
             <FormControl mt={8} isInvalid={!!errors.email}>
               <Input
                 type="email"
+                color="white"
                 placeholder="邮箱和手机号"
                 {...register("email", {
                   required: "邮箱不能为空",
@@ -94,6 +95,7 @@ export default function Login() {
               <Input
                 type="password"
                 placeholder="密码"
+                color="white"
                 {...register("password", {
                   required: "密码不能为空",
                   minLength: {
@@ -114,7 +116,7 @@ export default function Login() {
               align={"center"}
               justifyContent={"space-between"}
               mt={6}
-              color={"blue.600"}
+              color={"blue.100"}
             >
               <Box
                 cursor={"pointer"}

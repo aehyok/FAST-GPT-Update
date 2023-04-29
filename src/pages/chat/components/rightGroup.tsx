@@ -2,11 +2,11 @@
  * @Author: aehyok 455043818@qq.com
  * @Date: 2023-04-24 06:18:11
  * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-04-25 05:32:17
+ * @LastEditTime: 2023-04-29 08:17:22
  * @FilePath: \AK47-GPT\src\pages\chat\components\rightGroup.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
-import { Box, Image, Button, Textarea } from "@chakra-ui/react";
+import { Box, Image, Button, Textarea, Select } from "@chakra-ui/react";
 import { useState } from "react";
 import styles from "./rightGroup.module.scss";
 export default function leftGroup() {
@@ -36,6 +36,12 @@ export default function leftGroup() {
         <div className={styles.chatRight}>
           <div className={styles.rightScroll}>
             <div className={styles.rightContent}>
+              <Box display={"flex"} alignItems={"center"} justifyContent={"center"} paddingBottom={"10px"} paddingTop={"10px"}>
+                <Select  defaultValue="GPT-3.5" width={"150px"} color={"white"} height={"30px"}>
+                  <option value='option1'>GPT-3.5</option>
+                  <option value='option1'>GPT-4</option>
+                </Select>
+              </Box>
               {questionAndAnswerData.map((item, index) => (
                 <div key={index}>
                   <div className={styles.questionRight} >
