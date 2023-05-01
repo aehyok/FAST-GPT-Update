@@ -2,7 +2,7 @@
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-21 20:35:58
  * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-04-29 20:06:56
+ * @LastEditTime: 2023-05-01 19:27:58
  * @FilePath: \AK47-GPT\src\pages\chat\components\leftGroup.tsx
  * @Description: 
  * 
@@ -20,7 +20,8 @@ export default function leftGroup () {
     }, 
     {
       id: 2,
-      title: "chkra-ui使用"
+      title: "chkra-ui使用",
+      selected: true
     },
     {
       id: 3,
@@ -52,7 +53,7 @@ export default function leftGroup () {
       <OrderedList spacing={1} marginTop={"10px"} >
         {
           contentList.map(item => (
-            <ListItem key={item.id} color={"white"} margin={"10px"}>
+            <ListItem key={item.id} color={"white"} margin={"10px"} bgColor={ item.selected ? "red": 'black'}>
               <Flex minWidth='max-content' alignItems='center' gap='2' justifyContent={"center"}>
                 <Box>{item.title}</Box>
                 <Spacer />
