@@ -2,7 +2,7 @@
  * @Author: aehyok 455043818@qq.com
  * @Date: 2023-04-25 04:02:48
  * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-04-25 06:47:48
+ * @LastEditTime: 2023-04-30 14:40:09
  * @FilePath: /ak47-gpt/src/pages/api/file/index.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -22,10 +22,25 @@ type Data = {
   data: any
 }
 
+//cheerio抱错：runtime timeout not a function // 更新了最新的依赖
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
+  const loader = new CheerioWebBaseLoader(
+    "https://juejin.cn/post/7181095134758387773",
+      { selector:".markdown-body" },
+    // }
+  );
+
+  const docs = await loader.load();
+  
+  console.log(docs, 'docs')
+  res.status(200).json({data: docs})
+}
+
+
+const embeddings = async() => {
   console.log('jinlaile')
   const vectorStore = await MemoryVectorStore.fromTexts(
     ["Hello world", "Bye bye", "hello nice world"],
@@ -39,8 +54,7 @@ export default async function handler(
   const resultOne = await vectorStore.similaritySearch("hello world", 1);
   console.log(resultOne);
   console.log("search ok")
-  res.status(200).json({data: resultOne});
-
+  // res.status(200).json({data: resultOne});
 }
 
 
