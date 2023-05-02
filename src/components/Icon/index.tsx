@@ -2,7 +2,7 @@
  * @Author: aehyok 455043818@qq.com
  * @Date: 2023-04-19 20:30:30
  * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-04-29 20:09:22
+ * @LastEditTime: 2023-05-02 17:59:53
  * @FilePath: /ak47-gpt/src/components/Icon/index.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -16,6 +16,11 @@ const map = {
   image: require('./icons/image.svg').default,
   chat: require('./icons/chat.svg').default,
   account: require('./icons/account.svg').default,
+  message: require('./icons/message.svg').default,
+  edit: require('./icons/edit.svg').default,
+  delete: require('./icons/delete.svg').default,
+  yes: require('./icons/yes.svg').default,
+  no: require('./icons/no.svg').default,
   model: require('./icons/model.svg').default,
   share: require('./icons/share.svg').default,
   home: require('./icons/home.svg').default,
