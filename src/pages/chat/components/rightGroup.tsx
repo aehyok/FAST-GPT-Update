@@ -2,7 +2,7 @@
  * @Author: aehyok 455043818@qq.com
  * @Date: 2023-04-24 06:18:11
  * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-05-03 06:07:11
+ * @LastEditTime: 2023-05-03 06:13:36
  * @FilePath: \AK47-GPT\src\pages\chat\components\rightGroup.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -86,7 +86,7 @@ export default function leftGroup() {
                   </div>
 
                   <div className={styles.answerLeft}>
-                    <Box width={"24px"}>
+                    <Box width={"24px"} bgColor={"white"} marginTop={"20px"}>
                       <Image
                         src={"/images/openai.svg"}
                         width={"24px"}
