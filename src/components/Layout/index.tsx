@@ -2,7 +2,7 @@
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-19 17:14:17
  * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-04-29 17:01:08
+ * @LastEditTime: 2023-05-04 07:05:08
  * @FilePath: \AK47-GPT\src\components\Layout\index.tsx
  * @Description:
  *
@@ -63,7 +63,7 @@ const Layout = ({ children }: { children: JSX.Element }) => {
       <Box h={"100vh"} w={"100vw"} display={"flex"}>
         {!unShowLayoutRoute[router.pathname] ? (
           <>
-            <Box h={"100%"}  w={"80px"} bgColor={"#18181c"}>
+            <Box h={"100%"}  w={"80px"} bgColor={"#18181c"} minWidth={"80px"}>
               <Navbar navbarList={navbarList} />
             </Box>
             <Box flexGrow={1}  bg={"#343541"} >
