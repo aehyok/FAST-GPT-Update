@@ -3,7 +3,7 @@ lockfileVersion: '6.0'
 dependencies:
   '@chakra-ui/icons':
     specifier: ^2.0.18
-    version: 2.0.19(@chakra-ui/system@2.5.6)(react@18.2.0)
+    version: 2.0.19(@chakra-ui/system@2.5.7)(react@18.2.0)
   '@chakra-ui/react':
     specifier: ^2.5.5
     version: 2.6.0(@emotion/react@11.10.8)(@emotion/styled@11.10.8)(@types/react@18.0.35)(framer-motion@10.12.4)(react-dom@18.2.0)(react@18.2.0)
@@ -32,8 +32,8 @@ dependencies:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.22)
   axios:
-    specifier: ^1.3.5
-    version: 1.4.0
+    specifier: 0.26.1
+    version: 0.26.1
   cheerio:
     specifier: 1.0.0-rc.12
     version: 1.0.0-rc.12
@@ -47,8 +47,8 @@ dependencies:
     specifier: ^10.12.3
     version: 10.12.4(react-dom@18.2.0)(react@18.2.0)
   langchain:
-    specifier: ^0.0.56
-    version: 0.0.56(axios@1.4.0)(cheerio@1.0.0-rc.12)(mammoth@1.5.1)(pdfjs-dist@3.5.141)(srt-parser-2@1.2.2)
+    specifier: ^0.0.70
+    version: 0.0.70(axios@0.26.1)(cheerio@1.0.0-rc.12)(mammoth@1.5.1)(pdf-parse@1.1.1)(srt-parser-2@1.2.2)
   mammoth:
     specifier: ^1.5.1
     version: 1.5.1
@@ -1655,14 +1655,25 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@chakra-ui/icons@2.0.19(@chakra-ui/system@2.5.6)(react@18.2.0):
+  /@chakra-ui/icon@3.0.16(@chakra-ui/system@2.5.7)(react@18.2.0):
+    resolution: {integrity: sha512-RpA1X5Ptz8Mt39HSyEIW1wxAz2AXyf9H0JJ5HVx/dBdMZaGMDJ0HyyPBVci0m4RCoJuyG1HHG/DXJaVfUTVAeg==}
+    peerDependencies:
+      '@chakra-ui/system': '>=2.0.0'
+      react: '>=18'
+    dependencies:
+      '@chakra-ui/shared-utils': 2.0.5
+      '@chakra-ui/system': 2.5.7(@emotion/react@11.10.8)(@emotion/styled@11.10.8)(react@18.2.0)
+      react: 18.2.0
+    dev: false
+
+  /@chakra-ui/icons@2.0.19(@chakra-ui/system@2.5.7)(react@18.2.0):
     resolution: {integrity: sha512-0A6U1ZBZhLIxh3QgdjuvIEhAZi3B9v8g6Qvlfa3mu6vSnXQn2CHBZXmJwxpXxO40NK/2gj/gKXrLeUaFR6H/Qw==}
     peerDependencies:
       '@chakra-ui/system': '>=2.0.0'
       react: '>=18'
     dependencies:
-      '@chakra-ui/icon': 3.0.16(@chakra-ui/system@2.5.6)(react@18.2.0)
-      '@chakra-ui/system': 2.5.6(@emotion/react@11.10.8)(@emotion/styled@11.10.8)(react@18.2.0)
+      '@chakra-ui/icon': 3.0.16(@chakra-ui/system@2.5.7)(react@18.2.0)
+      '@chakra-ui/system': 2.5.7(@emotion/react@11.10.8)(@emotion/styled@11.10.8)(react@18.2.0)
       react: 18.2.0
     dev: false
 
@@ -2317,6 +2328,25 @@ packages:
       react-fast-compare: 3.2.1
     dev: false
 
+  /@chakra-ui/system@2.5.7(@emotion/react@11.10.8)(@emotion/styled@11.10.8)(react@18.2.0):
+    resolution: {integrity: sha512-yB6en7YdJPxKvKY2jJROVwkBE2CLFmHS4ZDx27VdYs0Fa4kGiyDFhJAfnMtLBNDVsTy1NhUHL9aqR63u56QqFg==}
+    peerDependencies:
+      '@emotion/react': ^11.0.0
+      '@emotion/styled': ^11.0.0
+      react: '>=18'
+    dependencies:
+      '@chakra-ui/color-mode': 2.1.12(react@18.2.0)
+      '@chakra-ui/object-utils': 2.1.0
+      '@chakra-ui/react-utils': 2.0.12(react@18.2.0)
+      '@chakra-ui/styled-system': 2.9.0
+      '@chakra-ui/theme-utils': 2.0.17
+      '@chakra-ui/utils': 2.0.15
+      '@emotion/react': 11.10.8(@types/react@18.0.35)(react@18.2.0)
+      '@emotion/styled': 11.10.8(@emotion/react@11.10.8)(@types/react@18.0.35)(react@18.2.0)
+      react: 18.2.0
+      react-fast-compare: 3.2.1
+    dev: false
+
   /@chakra-ui/table@2.0.17(@chakra-ui/system@2.5.6)(react@18.2.0):
     resolution: {integrity: sha512-OScheTEp1LOYvTki2NFwnAYvac8siAhW9BI5RKm5f5ORL2gVJo4I72RUqE0aKe1oboxgm7CYt5afT5PS5cG61A==}
     peerDependencies:
@@ -2392,8 +2422,28 @@ packages:
       lodash.mergewith: 4.6.2
     dev: false
 
+  /@chakra-ui/theme-utils@2.0.17:
+    resolution: {integrity: sha512-aUaVLFIU1Rs8m+5WVOUvqHKapOX8nSgUVGaeRWS4odxBM95dG4j15f4L88LEMw4D4+WWd0CSAS139OnRgj1rCw==}
+    dependencies:
+      '@chakra-ui/shared-utils': 2.0.5
+      '@chakra-ui/styled-system': 2.9.0
+      '@chakra-ui/theme': 3.1.1(@chakra-ui/styled-system@2.9.0)
+      lodash.mergewith: 4.6.2
+    dev: false
+
   /@chakra-ui/theme@3.1.0(@chakra-ui/styled-system@2.9.0):
     resolution: {integrity: sha512-lO2p37lyEGVmGUrr+lakHpnvrJHkkfPnSM+w9MGmR0V0rqIGTIBrirBO07vDccNRS17jcXjA8d9QZEBYzIVyNw==}
+    peerDependencies:
+      '@chakra-ui/styled-system': '>=2.8.0'
+    dependencies:
+      '@chakra-ui/anatomy': 2.1.2
+      '@chakra-ui/shared-utils': 2.0.5
+      '@chakra-ui/styled-system': 2.9.0
+      '@chakra-ui/theme-tools': 2.0.17(@chakra-ui/styled-system@2.9.0)
+    dev: false
+
+  /@chakra-ui/theme@3.1.1(@chakra-ui/styled-system@2.9.0):
+    resolution: {integrity: sha512-VHcG0CPLd9tgvWnajpAGqrAYhx4HwgfK0E9VOrdwa/3bN+AgY/0EAAXzfe0Q0W2MBWzSgaYqZcQ5cDRpYbiYPA==}
     peerDependencies:
       '@chakra-ui/styled-system': '>=2.8.0'
     dependencies:
@@ -3248,6 +3298,11 @@ packages:
       color-convert: 2.0.1
     dev: false
 
+  /ansi-styles@5.2.0:
+    resolution: {integrity: sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==}
+    engines: {node: '>=10'}
+    dev: false
+
   /any-promise@1.3.0:
     resolution: {integrity: sha512-7UvmKalWRt1wgjL1RrGxoSJW/0QZFIegpeGvZG9kjp8vrRu55XTHbwnqq2GpXm9uLbcuhxm3IqX9OB4MZR1b2A==}
     dev: false
@@ -3392,16 +3447,6 @@ packages:
     resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
     dependencies:
       follow-redirects: 1.15.2
-    transitivePeerDependencies:
-      - debug
-    dev: false
-
-  /axios@1.4.0:
-    resolution: {integrity: sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==}
-    dependencies:
-      follow-redirects: 1.15.2
-      form-data: 4.0.0
-      proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
     dev: false
@@ -5300,21 +5345,25 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /langchain@0.0.56(axios@1.4.0)(cheerio@1.0.0-rc.12)(mammoth@1.5.1)(pdfjs-dist@3.5.141)(srt-parser-2@1.2.2):
-    resolution: {integrity: sha512-5+UCYhKwg//fm2Gb32EpKQiuNlJqt2YdKIFyZRCEyqMSmTd1Cu4QcdRMjFfl7IVwyY3xrUC7dQIMsJ6k+TsRrA==}
+  /langchain@0.0.70(axios@0.26.1)(cheerio@1.0.0-rc.12)(mammoth@1.5.1)(pdf-parse@1.1.1)(srt-parser-2@1.2.2):
+    resolution: {integrity: sha512-QfTbWl3oP8LwiDsLM4pvJQF+MDnf709Okvf4tQKrxf2rUxd9L0Dgli7/sNaQfaR/uZK2NOf/aO106p7I+P3Law==}
     engines: {node: '>=18'}
     peerDependencies:
       '@aws-sdk/client-lambda': ^3.310.0
       '@aws-sdk/client-s3': ^3.310.0
+      '@clickhouse/client': ^0.0.14
       '@getmetal/metal-sdk': '*'
       '@huggingface/inference': ^1.5.1
       '@opensearch-project/opensearch': '*'
       '@pinecone-database/pinecone': '*'
       '@supabase/supabase-js': ^2.10.0
+      '@tensorflow-models/universal-sentence-encoder': '*'
+      '@tensorflow/tfjs-converter': '*'
+      '@tensorflow/tfjs-core': '*'
       '@zilliz/milvus2-sdk-node': ^2.2.0
-      axios: ^0.26.0
+      axios: '*'
       cheerio: ^1.0.0-rc.12
-      chromadb: ^1.3.0
+      chromadb: ^1.4.0
       cohere-ai: ^5.0.2
       d3-dsv: ^2.0.0
       epub2: ^3.0.1
@@ -5322,7 +5371,7 @@ packages:
       html-to-text: ^9.0.5
       mammoth: '*'
       mongodb: ^5.2.0
-      pdfjs-dist: ^3.4.120
+      pdf-parse: 1.1.1
       playwright: ^1.32.1
       puppeteer: ^19.7.2
       redis: ^4.6.4
@@ -5335,6 +5384,8 @@ packages:
         optional: true
       '@aws-sdk/client-s3':
         optional: true
+      '@clickhouse/client':
+        optional: true
       '@getmetal/metal-sdk':
         optional: true
       '@huggingface/inference':
@@ -5344,6 +5395,12 @@ packages:
       '@pinecone-database/pinecone':
         optional: true
       '@supabase/supabase-js':
+        optional: true
+      '@tensorflow-models/universal-sentence-encoder':
+        optional: true
+      '@tensorflow/tfjs-converter':
+        optional: true
+      '@tensorflow/tfjs-core':
         optional: true
       '@zilliz/milvus2-sdk-node':
         optional: true
@@ -5367,7 +5424,7 @@ packages:
         optional: true
       mongodb:
         optional: true
-      pdfjs-dist:
+      pdf-parse:
         optional: true
       playwright:
         optional: true
@@ -5386,7 +5443,8 @@ packages:
     dependencies:
       '@anthropic-ai/sdk': 0.4.3
       '@dqbd/tiktoken': 1.0.7
-      axios: 1.4.0
+      ansi-styles: 5.2.0
+      axios: 0.26.1
       binary-extensions: 2.2.0
       browser-or-node: 2.1.1
       cheerio: 1.0.0-rc.12
@@ -5399,11 +5457,12 @@ packages:
       openai: 3.2.1
       p-queue: 6.6.2
       p-retry: 4.6.2
-      pdfjs-dist: 3.5.141
+      pdf-parse: 1.1.1
       srt-parser-2: 1.2.2
       uuid: 9.0.0
       yaml: 2.2.2
       zod: 3.21.4
+      zod-to-json-schema: 3.21.0(zod@3.21.4)
     transitivePeerDependencies:
       - debug
       - encoding
@@ -6575,10 +6634,6 @@ packages:
     resolution: {integrity: sha512-kma4U7AFCTwpqq5twzC1YVIDXSqg6qQK6JN0smOw8fgRy1OkMi0CYSzFmsy6dnqSenamAtj0CyXMUJ1Mf6oROg==}
     dev: false
 
-  /proxy-from-env@1.1.0:
-    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
-    dev: false
-
   /punycode@2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
     engines: {node: '>=6'}
@@ -7731,6 +7786,14 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  /zod-to-json-schema@3.21.0(zod@3.21.4):
+    resolution: {integrity: sha512-+KyFCzqKwE6CxMSZxEUBaGmdXzB09BoFebO+xef/ISE4cTfReQlyThYbS8aqd3uWkdt9fz5BGHsY0CbY+Ra9oA==}
+    peerDependencies:
+      zod: ^3.21.4
+    dependencies:
+      zod: 3.21.4
     dev: false
 
   /zod@3.21.4:
