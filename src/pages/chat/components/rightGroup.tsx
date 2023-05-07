@@ -2,7 +2,7 @@
  * @Author: aehyok 455043818@qq.com
  * @Date: 2023-04-24 06:18:11
  * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-05-03 06:13:36
+ * @LastEditTime: 2023-05-04 07:25:23
  * @FilePath: \AK47-GPT\src\pages\chat\components\rightGroup.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -126,15 +126,28 @@ export default function leftGroup() {
           )}
 
           <div className={styles.footContent}>
-            <Button size="sm" mr={2} variant="solid" colorScheme="teal">
+            {/* <Button size="sm" mr={2} variant="solid" colorScheme="teal">
               生成会话截图
-            </Button>
+            </Button> */}
             <Textarea
               color={"white"}
               size="xs"
               placeholder="Send a message......"
               paddingTop={"10px"}
-              margin={"8px"}
+              py={0}
+              pr={['45px', '55px']}
+              border={'1px solid white'}
+              _focusVisible={{
+                border: 'none'
+              }}
+              rows={2}
+              height={'22px'}
+              lineHeight={'22px'}
+              maxHeight={'150px'}
+              maxLength={-1}
+              overflowY={'auto'}
+              whiteSpace={'pre-wrap'}
+              wordBreak={'break-all'}
             />
             <Button
               size="sm"
