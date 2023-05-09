@@ -5,6 +5,7 @@ specifiers:
   '@chakra-ui/react': ^2.5.5
   '@emotion/react': ^11.10.6
   '@emotion/styled': ^11.10.6
+  '@qdrant/js-client-rest': ^1.1.5
   '@svgr/webpack': ^7.0.0
   '@tanstack/react-query': ^4.29.5
   '@types/node': 18.15.11
@@ -16,11 +17,13 @@ specifiers:
   eslint: 8.38.0
   eslint-config-next: 13.3.0
   framer-motion: ^10.12.3
+  i: ^0.3.7
   langchain: ^0.0.70
   mammoth: ^1.5.1
   next: 13.3.0
   pdf-parse: ^1.1.1
   pdfjs-dist: ^3.5.141
+  pnpm: ^8.4.0
   postcss: 8.4.22
   react: 18.2.0
   react-dom: 18.2.0
@@ -40,6 +43,7 @@ dependencies:
   '@chakra-ui/react': 2.6.0_aqe7ytkxtrdahp5wl3v7y4r4ma
   '@emotion/react': 11.10.8_yuz6bkerhkjfjuf6zeb7j6ybc4
   '@emotion/styled': 11.10.8_7amavfb7qjuwnbar4rxjcqruwm
+  '@qdrant/js-client-rest': 1.1.5_typescript@5.0.4
   '@svgr/webpack': 7.0.0
   '@tanstack/react-query': 4.29.5_biqbaboplfbrettd7655fr4n2y
   '@types/node': 18.15.11
@@ -51,11 +55,13 @@ dependencies:
   eslint: 8.38.0
   eslint-config-next: 13.3.0_voubu7prgxjfsfbgx5d4sqnwiy
   framer-motion: 10.12.4_biqbaboplfbrettd7655fr4n2y
+  i: 0.3.7
   langchain: 0.0.70_4ejxhjk23zuzddngyqv2kdinhi
   mammoth: 1.5.1
   next: 13.3.0_txdvpvppf2ilsh27xadmwrzlmm
   pdf-parse: 1.1.1
   pdfjs-dist: 3.5.141
+  pnpm: 8.4.0
   postcss: 8.4.22
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -2831,8 +2837,23 @@ packages:
     resolution: {integrity: sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw==}
     dev: false
 
+  /@qdrant/js-client-rest/1.1.5_typescript@5.0.4:
+    resolution: {integrity: sha512-GwC+aNKHZbDgDCWOnWaZJ0TzkzA49SkGPZkq6gNp+aOhjW1BjiieOtMkNYtO+HpykmtkArBzSWLnvm1HyqYYNg==}
+    engines: {node: '>=18.0.0', pnpm: '>=8'}
+    peerDependencies:
+      typescript: '>=4.1'
+    dependencies:
+      '@sevinf/maybe': 0.5.0
+      openapi-typescript-fetch: github.com/Rendez/openapi-typescript-fetch/c114c381602b9b3891f0ec45dbc5409816743dad
+      typescript: 5.0.4
+    dev: false
+
   /@rushstack/eslint-patch/1.2.0:
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
+    dev: false
+
+  /@sevinf/maybe/0.5.0:
+    resolution: {integrity: sha512-ARhyoYDnY1LES3vYI0fiG6e9esWfTNcXcO6+MPJJXcnyMV3bim4lnFt45VXouV7y82F4x3YH8nOQ6VztuvUiWg==}
     dev: false
 
   /@svgr/babel-plugin-add-jsx-attribute/7.0.0_@babel+core@7.21.5:
@@ -4906,6 +4927,11 @@ packages:
     dev: false
     optional: true
 
+  /i/0.3.7:
+    resolution: {integrity: sha512-FYz4wlXgkQwIPqhzC5TdNMLSE5+GS1IIDJZY/1ZiEPCT2S3COUVZeT5OW4BmW4r5LHLQuOosSwsvnroG9GR59Q==}
+    engines: {node: '>=0.4'}
+    dev: false
+
   /ignore/5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
@@ -6446,6 +6472,12 @@ packages:
     engines: {node: '>= 6'}
     dev: false
 
+  /pnpm/8.4.0:
+    resolution: {integrity: sha512-oW5jpFgCmXHIVOU5HZLBWGBtCH7K4JSRdpk7/f+Dtp+KhUsX5NQaWzzYyU9TX7eAsfYMko179133gbUS+JTrMw==}
+    engines: {node: '>=16.14'}
+    hasBin: true
+    dev: false
+
   /postcss-import/14.1.0_postcss@8.4.22:
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
     engines: {node: '>=10.0.0'}
@@ -7729,4 +7761,13 @@ packages:
 
   /zwitch/2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
+    dev: false
+
+  github.com/Rendez/openapi-typescript-fetch/c114c381602b9b3891f0ec45dbc5409816743dad:
+    resolution: {tarball: https://codeload.github.com/Rendez/openapi-typescript-fetch/tar.gz/c114c381602b9b3891f0ec45dbc5409816743dad}
+    name: openapi-typescript-fetch
+    version: 1.1.3
+    engines: {node: '>= 12.0.0', npm: '>= 6.0.0'}
+    prepare: true
+    requiresBuild: true
     dev: false
