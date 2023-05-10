@@ -1,9 +1,9 @@
 /*
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-17 15:58:32
- * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-05-09 23:31:22
- * @FilePath: \AK47-GPT\src\pages\api\embeddings.ts
+ * @LastEditors: 刘启明 455043818@qq.com
+ * @LastEditTime: 2023-05-10 13:56:23
+ * @FilePath: \AK47-GPT\src\pages\api\robot\index.ts
  * @Description:
  *
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
