@@ -1,4 +1,15 @@
-On an adventure beyond the continent of Moebius, a legacy is accidentally triggered. A portal hidden in space appears, and the adventurers are transported through an ancient portal to a completely unknown planet, where there are still traces of civilisation. But bizarrely, the entire planet has no connection to Mobius or even Ocean of Soul, as if it existed in another dimension, which is certainly an astonishing discovery.
-Adventurers from Moebius then founded a committee to undertake a massive exploration of the realm. But the exploration was not a satisfactory one, with most of the space being filled with chaotic energies, causing serious damage to the exploration teams. And as the portal energy faded, it caused the material replenishment of the Committee to a stagnant halt.
-However, in the meantime, the Committee has still acquired a number of independent planets with intact ecology that can support life. After saving a portion of the planets with special significance, the remaining planets will be sold to adventuring teams with exceptional contributions.
-Such planets, with their various ecological capabilities to support life, are undoubtedly an invaluable asset for adventurous teams, being extremely secretive and safe and contains valuable resources that are not possible to obtain on Moebius. The only way to get to it is to get the exact coordinates through a portal. In time, the possession of the PLANET coordinates, issued by the Committee, became a status symbol for the adventuring team — a symbol of a glorious future.
+带着概念故事前往 PLANET
+在莫比乌斯大陆以外的冒险中，意外触发了一项遗产。一个隐藏在太空中的传送门出现，冒险者们通过一个古老的传送门被传送到一个完全未知的星球，那里仍然有文明的痕迹。但诡异的是，整颗星球与莫比乌斯甚至灵魂之海都没有任何联系，仿佛存在于另一个维度，这无疑是一个惊人的发现。
+Moebius 的冒险家随后成立了一个委员会，对该领域进行大规模探索。但探索并不尽如人意，大部分空间都充斥着混沌能量，让探索小队损失惨重。而随着门户能量的消退，更是让委员会的物资补给陷入了停滞。
+不过与此同时，委员会还是获得了一些生态完好、可以支持生命存在的独立行星。在拯救了一部分具有特殊意义的星球后，剩余的星球将被出售给有特殊贡献的冒险团队。
+这样的行星，以其支持生命的各种生态能力，对于冒险团队来说无疑是一笔宝贵的财富，极其隐秘和安全，蕴藏着在莫比乌斯上无法获得的宝贵资源。到达它的唯一方法是通过门户获取准确的坐标。久而久之，拥有委员会颁发的PLANET座标，成为了冒险队的身份象征——辉煌未来的象征。
+一个有创意的概念故事是所有后续开发工作的起点，我们有广阔的世界观和完整的故事线。“想法从不缺乏，但正是这些独特的故事帮助团队找出主题，”Aqua 说。
+用概念设计召唤PLANET
+概念设计在纸上收集创意，对于 PLANET，这让我们的团队成员更好地理解它应该是什么样子。所以我们开始为这个项目起草各种草案。
+我们已经尝试了几种不同的概念设计来确定创建 PLANET 的初始过程。“PLANET 以行星为载体，展示了它的多变性和无穷无尽。” 特洛伊说，“接下来我们会抛出各种各样的想法，比如新生态、个性化和可能的特效。”
+基于概念设计，我们与美术和编程团队分享了最终的概念设计，他们负责将设计变为现实。每个星球都有完全不同的地形、生态。在创建 PLANET 时，采用程序化地图生成方法来完成这一相当大的挑战，以确保每个 PLANET 都是独一无二的艺术团队和程序团队相互协作。
+赋能功能，创造PLANET
+正如概念故事所示，我们围绕 PLANET 设计了许多独特的功能。
+联盟机制是游戏的核心系统之一，也是你拥有PLANET后首先要做的事情。工会是由玩家经营的完全自由的组织。工会系统为玩家提供了一系列的特权和福利，例如工会商店、工会任务、工会宝箱等等。它为玩家提供了更多在游戏中互动和合作的机会，并增强了游戏的社交性。通过工会系统，您可以与志同道合的玩家交流，一起探索世界。同时，它可以结成同盟或争夺pvp。
+总而言之，联盟是一个非常关键的游戏功能，它将为玩家提供更多互动和协作的机会，增加游戏的社交性，增强游戏的可玩性……这一切都还在开发中，我们已经投入了大量的工作进入其中，但现在谈论细节还为时过早。
+同时，由于每个 PLANET 上都存在宝贵的资源和独特的生态系统，这对单人玩家或公会来说是一个巨大的推动力。你可以快速获取在莫比乌斯上无法获得或难以获得的材料、武器、装备……或者在亲手建造的房子里，在火炉前烤鱼……

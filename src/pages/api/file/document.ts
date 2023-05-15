@@ -1,8 +1,8 @@
 /*
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-05-06 07:07:50
- * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-05-08 00:44:26
+ * @LastEditors: 刘启明 455043818@qq.com
+ * @LastEditTime: 2023-05-11 12:48:30
  * @FilePath: \AK47-GPT\src\pages\api\file\document.ts
  * @Description:
  *
@@ -30,7 +30,7 @@ export default async function handler(
     { basePath: process.env.OPENAI_API_PROXY, baseOptions: { adapter: null } }
   );
   const model = new OpenAI(
-    { temperature: 0, openAIApiKey: process.env.OPENAI_API_KEY },
+    { temperature: 0, openAIApiKey: process.env.OPENAI_API_KEY, maxTokens: 2000 },
     { basePath: process.env.OPENAI_API_PROXY, baseOptions: { adapter: null } }
   );
   const chain = loadQARefineChain(model);
@@ -44,7 +44,7 @@ export default async function handler(
   const store = await MemoryVectorStore.fromDocuments(docs, embeddings);
   console.log(store, "store");
   // Select the relevant documents
-  const question = "What is the purpose of the established committee?";
+  const question = "根据上下文，说一下什么是联盟？";
   const relevantDocs = await store.similaritySearch(question);
   console.log(relevantDocs, "relevantDocs");
 
