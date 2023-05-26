@@ -1,8 +1,8 @@
 /*
  * @Author: 刘启明 455043818@qq.com
  * @Date: 2023-04-19 17:14:17
- * @LastEditors: aehyok 455043818@qq.com
- * @LastEditTime: 2023-05-04 07:05:08
+ * @LastEditors: 刘启明 455043818@qq.com
+ * @LastEditTime: 2023-05-25 19:41:34
  * @FilePath: \AK47-GPT\src\components\Layout\index.tsx
  * @Description:
  *
@@ -21,37 +21,37 @@ const Layout = ({ children }: { children: JSX.Element }) => {
 
   const navbarList = [
     {
-      label: '聊天',
+      label: '邮件列表',
       icon: 'chat',
       link: '/chat',
       activeLink: ['/chat']
     },
     {
-      label: '模型',
+      label: '客服资料',
       icon: 'model',
       link: '/model/list',
       activeLink: ['/model/list', '/model/edit']
     },
     {
-      label: '图片',
+      label: '企业管理',
       icon: 'image',
       link: '/image',
       activeLink: ['/image']
     },
     {
-      label: '音频',
+      label: '企业用户',
       icon: 'audio',
       link: '/audio',
       activeLink: ['/audio']
     },
     {
-      label: '视频',
+      label: '企业账单',
       icon: 'video',
       link: '/video',
       activeLink: ['/video']
     },
     {
-      label: '开发',
+      label: '我的',
       icon: 'develop',
       link: '/develop',
       activeLink: ['/develop']
