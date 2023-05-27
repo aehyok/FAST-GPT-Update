@@ -18,6 +18,8 @@ import {
 } from "@chakra-ui/react";
 import styles from "./index.module.scss";
 import { postLogin } from "@/api/user";
+import { useToast } from '../../hooks/useToast';
+import router from "next/router";
 
 export default function Login() {
   interface LoginFormType {
@@ -32,13 +34,31 @@ export default function Login() {
   } = useForm<LoginFormType>();
 
   const [requesting, setRequesting] = useState(false);
-
+  const { toast } = useToast();
   const onclickLogin = useCallback(
     async ({ email, password }: LoginFormType) => {
       console.log("onclickLogin", email, password);
       setRequesting(true);
-      const response = await postLogin({ email,password });
-      console.log(response, "后端返回给前端的代码");
+      
+      try{
+        const response: any = await postLogin({ email,password });
+        console.log(response, "后端返回给前端的代码");
+        if(response.code == 200) {
+          toast({
+          title: '登录成功',
+          status: 'success'
+        });
+        router.push('/model/list');
+        }
+      }
+      catch(error: any) {
+        toast({
+          title: error.message || '登录异常',
+          status: 'error'
+        });
+      }
+      
+      
       // try {
       //   loginSuccess(
       //     await postLogin({

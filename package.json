@@ -16,9 +16,11 @@
     "@qdrant/js-client-rest": "^1.1.5",
     "@svgr/webpack": "^7.0.0",
     "@tanstack/react-query": "^4.29.5",
+    "@types/jsonwebtoken": "^9.0.2",
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
+    "@types/tunnel": "^0.0.3",
     "autoprefixer": "10.4.14",
     "axios": "0.26.1",
     "cheerio": "1.0.0-rc.12",
@@ -26,8 +28,10 @@
     "eslint-config-next": "13.3.0",
     "framer-motion": "^10.12.3",
     "i": "^0.3.7",
+    "jsonwebtoken": "^9.0.0",
     "langchain": "^0.0.70",
     "mammoth": "^1.5.1",
+    "mongoose": "^7.2.1",
     "next": "13.3.0",
     "pdf-parse": "^1.1.1",
     "pdfjs-dist": "^3.5.141",
@@ -44,6 +48,7 @@
     "sass": "^1.62.0",
     "srt-parser-2": "^1.2.2",
     "tailwindcss": "3.3.1",
+    "tunnel": "^0.0.6",
     "typescript": "5.0.4"
   }
 }

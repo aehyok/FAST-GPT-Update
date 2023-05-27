@@ -1,8 +1,9 @@
-import type { ServiceName, ModelDataType, ModelSchema } from '@/types/mongoSchema';
+// import type { ServiceName, ModelDataType, ModelSchema } from '@/types/mongoSchema';
 // import type { RedisModelDataItemType } from '@/types/redis';
 
 export enum ChatModelNameEnum {
   GPT35 = 'gpt-3.5-turbo',
+  GPT40 = 'gpt-4',
   VECTOR_GPT = 'VECTOR_GPT',
   VECTOR = 'text-embedding-ada-002'
 }
